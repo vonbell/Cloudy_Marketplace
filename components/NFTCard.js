@@ -18,6 +18,7 @@ const NFTCard = ({ data }) => {
                 ...SHADOWS.dark
             }}>
 
+            {/* NFT Image & Like Button */}
             <View style={{ width: '100%', height: 250 }}>
                 <Image 
                     source={data.image} 
@@ -31,18 +32,21 @@ const NFTCard = ({ data }) => {
                 />
                 <CircleButton imgUrl={assets.heart} right={10} top={10} />
             </View>
-
+            
+            {/* People bidding & End of Sale */}
             <SubInfo />
 
+            {/* NFT title & sub title */}
             <View style={{ width: '100%', padding: SIZES.font }}>
                 <NFTTitle 
                     title={data.name}
                     subTitle={data.creator}
                     titleSize={SIZES.large}
-                    subTitleSize={SIZES.small}
+                    subTitleSize={SIZES.medium}
                 />
             </View>
 
+            {/* ETH price and Place a bid button */}
             <View 
                 style={{
                     marginTop: SIZES.font,

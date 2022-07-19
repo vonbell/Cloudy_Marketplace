@@ -4,7 +4,7 @@ import { SIZES, FONTS, COLORS, SHADOWS, assets } from '../constants';
 export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
     return (
         <View>
-            <Text style={{ fontSize: titleSize, color: COLORS.primary }}>{title}</Text>
+            <Text style={{ fontSize: titleSize, color: COLORS.primary, fontWeight: 'bold', marginBottom: 2 }}>{title}</Text>
             <Text style={{ fontSize: subTitleSize, color: COLORS.primary }}>{subTitle}</Text>
         </View>
     )
@@ -12,11 +12,11 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
 
 export const ETHPrice = ({ price }) => {
     return (
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10, marginRight: 2, marginLeft: 12 }}>
             <Image 
                 source={assets.eth}
                 resizeMode='contain'
-                style={{ width: 20, height: 20, marginRight: 2 }}
+                style={{ width: 20, height: 20 }}
             />
             <Text 
                 style={{
