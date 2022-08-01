@@ -6,7 +6,7 @@ const HomeHeader = ({ onSearch }) => {
         <View
             style={{
                 backgroundColor: COLORS.primary,
-                padding :SIZES.font
+                padding: SIZES.font
             }}>
 
             <View
