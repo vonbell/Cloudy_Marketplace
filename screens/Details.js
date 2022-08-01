@@ -26,9 +26,9 @@ const DetailsHeader = ({ data, navigation }) => (
 
 const Details = ({ route, navigation }) => {
     const { data } = route.params;
-    console.log(`-----------------------------------------------------------------`);
-    console.log(data);
-    console.log(`-----------------------------------------------------------------`);
+    // console.log(`-----------------------------------------------------------------`);
+    // console.log(data);
+    // console.log(`-----------------------------------------------------------------`);
     
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -63,6 +63,13 @@ const Details = ({ route, navigation }) => {
                         <SubInfo />
                         <View style={{ padding: SIZES.font }}>
                             <DetailsDesc data={data} />
+
+                            {data.bids.length > 0 && (
+                                <Text style={{ fontSize: SIZES.font, color: COLORS.primary, fontWeight: 'bold' }}>
+                                    Current Bids
+                                </Text>
+                            )}
+
                         </View>
                     </React.Fragment>
                 )}
