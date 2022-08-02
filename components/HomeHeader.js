@@ -24,7 +24,7 @@ const HomeHeader = ({ onSearch }) => {
 
                 <View style={{ width: 45, height: 45 }}>
                     <Image
-                        source={assets.person01}
+                        source={assets.person05}
                         resizeMode='contain'
                         style={{ width: '100%', height: '100%' }}
                     />
@@ -38,10 +38,10 @@ const HomeHeader = ({ onSearch }) => {
 
             <View style={{ marginVertical: SIZES.font }}>
                 <Text style={{ fontSize: SIZES.small, color: COLORS.white }}>
-                    Hello, Tay 👋
+                    Hello, John 👋
                 </Text>
                 <Text style={{ fontSize: SIZES.large, color: COLORS.white, marginTop: SIZES.base / 2 }}>
-                    Let's find a masterpiece
+                    Let's find a masterpiece!
                 </Text>
             </View>
 

@@ -15,11 +15,21 @@ import nft07 from "../assets/images/nft07.jpeg";
 import stefansheart from "../assets/images/stefansheart.jpeg";
 import savannahzebra from "../assets/images/savannahzebra.jpeg";
 import metatrends from "../assets/images/metatrends.jpeg";
+import cubex from "../assets/images/cubex.jpeg";
 
 import person01 from "../assets/images/person01.png";
 import person02 from "../assets/images/person02.png";
 import person03 from "../assets/images/person03.png";
 import person04 from "../assets/images/person04.png";
+import person05 from "../assets/images/person05.png";
+import person06 from "../assets/images/person06.png";
+import person07 from "../assets/images/person07.png";
+import person08 from "../assets/images/person08.png";
+import person09 from "../assets/images/person09.png";
+import person10 from "../assets/images/person10.png";
+import person11 from "../assets/images/person11.png";
+import person12 from "../assets/images/person12.png";
+import person13 from "../assets/images/person13.png";
 
 export default {
   badge,
@@ -39,9 +49,19 @@ export default {
   stefansheart,
   savannahzebra,
   metatrends,
+  cubex,
 
   person01,
   person02,
   person03,
   person04,
+  person05,
+  person06,
+  person07,
+  person08,
+  person09,
+  person10,
+  person11,
+  person12,
+  person13,
 };
