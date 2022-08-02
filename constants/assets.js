@@ -12,6 +12,9 @@ import nft04 from "../assets/images/nft04.jpeg";
 import nft05 from "../assets/images/nft05.jpeg";
 import nft06 from "../assets/images/nft06.jpeg";
 import nft07 from "../assets/images/nft07.jpeg";
+import stefansheart from "../assets/images/stefansheart.jpeg";
+import savannahzebra from "../assets/images/savannahzebra.jpeg";
+import metatrends from "../assets/images/metatrends.jpeg";
 
 import person01 from "../assets/images/person01.png";
 import person02 from "../assets/images/person02.png";
@@ -33,6 +36,9 @@ export default {
   nft05,
   nft06,
   nft07,
+  stefansheart,
+  savannahzebra,
+  metatrends,
 
   person01,
   person02,

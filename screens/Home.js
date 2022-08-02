@@ -32,7 +32,7 @@ const Home = () => {
             left: 0,
             zIndex: -1
           }}>
-          <View style={{ height: 300, backgroundColor: COLORS.primary }} />
+          <View style={{ height: '100%', backgroundColor: COLORS.primary }} />
           <View style={{ height: 300, backgroundColor: COLORS.white }} />
         </View>
 
