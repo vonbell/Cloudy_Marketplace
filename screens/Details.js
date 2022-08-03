@@ -1,28 +1,43 @@
 import React from 'react';
+import { useState } from 'react';
 import { Text, View, SafeAreaView, Image, StatusBar, FlatList } from 'react-native';
 import { COLORS, SIZES, SHADOWS, FONTS, assets } from '../constants';
 import { CircleButton, RectButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
 
-const DetailsHeader = ({ data, navigation }) => (
-    <View style={{ width: '100%', height: 373 }}>
-        <Image 
-            source={data.image}
-            resizeMode='cover'
-            style={{ width: '100%', height: '100%' }}
-        />
-        <CircleButton
-            imgUrl={assets.left}
-            handlePress={() => navigation.goBack()}
-            left={15}
-            top={StatusBar.currentHeight + 10}
-        />
-        <CircleButton
-            imgUrl={assets.heart}
-            right={15}
-            top={StatusBar.currentHeight + 10}
-        />
-    </View>
-)
+const DetailsHeader = ({ data, navigation }) => {
+    const [heartColor, setHeartColor] = useState(assets.heartUnlike);
+    const [like, setLike] = useState(false);
+    
+    return (
+        <View style={{ width: '100%', height: 373 }}>
+            <Image 
+                source={data.image}
+                resizeMode='cover'
+                style={{ width: '100%', height: '100%' }}
+            />
+            <CircleButton
+                imgUrl={assets.left}
+                handlePress={() => navigation.goBack()}
+                left={15}
+                top={StatusBar.currentHeight + 25}
+            />
+            <CircleButton 
+                imgUrl={heartColor} 
+                right={15}
+                top={StatusBar.currentHeight + 25} 
+                handlePress={() => {
+                    if(!like) {
+                        setHeartColor(assets.heart);
+                        setLike(true);
+                    } else {
+                        setHeartColor(assets.heartUnlike);
+                        setLike(false);
+                    }
+                }}
+            />
+        </View>
+    )
+}
 
 const Details = ({ route, navigation }) => {
     const { data } = route.params;

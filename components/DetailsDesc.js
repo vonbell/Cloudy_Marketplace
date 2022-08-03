@@ -9,6 +9,7 @@ const DetailsDesc = ({ data }) => {
 
     return (
         <>
+            {/* NFT Title & Price row */}
             <View
                 style={{
                     width: '100%',
@@ -26,8 +27,8 @@ const DetailsDesc = ({ data }) => {
                 <ETHPrice price={data.price} />
             </View>
 
+            {/* Description row */}
             <View style={{ marginVertical: SIZES.extraLarge * 1.5 }}>
-
                 <Text style={{ fontSize: SIZES.font, color: COLORS.primary, fontWeight: 'bold' }}>
                     Description
                 </Text>
@@ -51,7 +52,6 @@ const DetailsDesc = ({ data }) => {
                         </Text>
                     </Text>
                 </View>
-
             </View>
         </>
     )

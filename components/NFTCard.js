@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { View, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
@@ -6,6 +7,8 @@ import { SubInfo, ETHPrice, NFTTitle } from './SubInfo';
 
 const NFTCard = ({ data }) => {
     const navigation = useNavigation();
+    const [heartColor, setHeartColor] = useState(assets.heartUnlike);
+    const [like, setLike] = useState(false);
 
     return (
         <View 
@@ -29,7 +32,20 @@ const NFTCard = ({ data }) => {
                         borderTopRightRadius: SIZES.font
                     }}
                 />
-                <CircleButton imgUrl={assets.heart} right={10} top={10} />
+                <CircleButton 
+                    imgUrl={heartColor} 
+                    right={10} 
+                    top={10} 
+                    handlePress={() => {
+                        if(!like) {
+                            setHeartColor(assets.heart);
+                            setLike(true);
+                        } else {
+                            setHeartColor(assets.heartUnlike);
+                            setLike(false);
+                        }
+                    }}
+                />
             </View>
             
             {/* People bidding & End of Sale */}

@@ -22,7 +22,6 @@ export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
                 resizeMode="contain"
                 style={{ width: 24, height: 24 }}
             />
-
         </TouchableOpacity>
     )
 }
