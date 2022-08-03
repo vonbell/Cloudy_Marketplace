@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, RectButton } from './Button';
@@ -22,16 +22,19 @@ const NFTCard = ({ data }) => {
 
             {/* NFT Image & Like Button */}
             <View style={{ width: '100%', height: 250 }}>
-                <Image 
-                    source={data.image} 
-                    resizeMode='cover' 
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        borderTopLeftRadius: SIZES.font,
-                        borderTopRightRadius: SIZES.font
-                    }}
-                />
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate("Details", { data })}>
+                    <Image 
+                        source={data.image} 
+                        resizeMode='cover' 
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            borderTopLeftRadius: SIZES.font,
+                            borderTopRightRadius: SIZES.font
+                        }}
+                    />
+                </TouchableOpacity>
                 <CircleButton 
                     imgUrl={heartColor} 
                     right={10} 
