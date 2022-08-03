@@ -1,6 +1,5 @@
 import { View, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, RectButton } from './Button';
 import { SubInfo, ETHPrice, NFTTitle } from './SubInfo';
@@ -61,7 +60,6 @@ const NFTCard = ({ data }) => {
                     handlePress={() => navigation.navigate("Details", { data })} // similiar to React Router in React
                 />
             </View>
-            
         </View>
     )
 }
